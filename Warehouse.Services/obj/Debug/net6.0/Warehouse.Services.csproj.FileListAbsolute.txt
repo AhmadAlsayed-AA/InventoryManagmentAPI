@@ -1,0 +1,17 @@
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Services.deps.json
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Services.dll
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Services.pdb
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Data.dll
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Repository.dll
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Data.pdb
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/bin/Debug/net6.0/Warehouse.Repository.pdb
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.csproj.AssemblyReference.cache
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.AssemblyInfoInputs.cache
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.AssemblyInfo.cs
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.csproj.CoreCompileInputs.cache
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.csproj.CopyComplete
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.dll
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/refint/Warehouse.Services.dll
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/Warehouse.Services.pdb
+/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/Debug/net6.0/ref/Warehouse.Services.dll

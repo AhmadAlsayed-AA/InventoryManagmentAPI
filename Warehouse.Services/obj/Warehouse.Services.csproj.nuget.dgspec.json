@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/Warehouse.Services.csproj": {}
+  },
+  "projects": {
+    "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj",
+        "projectName": "Warehouse.Data",
+        "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj",
+        "packagesPath": "/Users/ahmad/.nuget/packages/",
+        "outputPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/Warehouse.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/Warehouse.Repository.csproj",
+        "projectName": "Warehouse.Repository",
+        "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/Warehouse.Repository.csproj",
+        "packagesPath": "/Users/ahmad/.nuget/packages/",
+        "outputPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj": {
+                "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/Warehouse.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/Warehouse.Services.csproj",
+        "projectName": "Warehouse.Services",
+        "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/Warehouse.Services.csproj",
+        "packagesPath": "/Users/ahmad/.nuget/packages/",
+        "outputPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ahmad/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj": {
+                "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Data/Warehouse.Data.csproj"
+              },
+              "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/Warehouse.Repository.csproj": {
+                "projectPath": "/Users/ahmad/Projects/WarehouseAPI/Warehouse.Repository/Warehouse.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
