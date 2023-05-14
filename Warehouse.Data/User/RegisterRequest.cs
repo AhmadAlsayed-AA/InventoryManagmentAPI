@@ -19,9 +19,16 @@ namespace Warehouse.Data.User
         [Required]
         public string Password { get; set; }
 
-        [Required]
-        public Roles UserType { get; set; }
+        [EnumDataType(typeof(Roles))]
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public Roles Role { get; set; }
 
+        public bool IsActive { get; set; }
+
+        public RegisterRequest()
+        {
+            IsActive = true; // Set the default value of isActive to true
+        }
     }
 }
 

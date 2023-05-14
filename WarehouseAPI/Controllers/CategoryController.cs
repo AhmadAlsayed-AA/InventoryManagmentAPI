@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Warehouse.Data.Product;
 using Warehouse.Services;
+using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,6 +42,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
+
         public IActionResult AddCategory( Category category)
         {
             _categoryService.AddCategory(category);
@@ -46,6 +51,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
+
         public IActionResult UpdateCategory(int id, Category category)
         {
             if (id != category.Id)
@@ -57,6 +64,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
+
         public IActionResult DeleteCategory(int id)
         {
             var category = _categoryService.GetCategoryById(id);

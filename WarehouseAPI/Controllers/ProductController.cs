@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Warehouse.Data.Product;
 using Warehouse.Services;
+using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,6 +31,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+
         public IActionResult GetProductById(int id)
         {
             var product = _productService.GetProductById(id);
@@ -39,6 +44,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
         public IActionResult AddProduct( Product product)
         {
             _productService.AddProduct(product);
@@ -46,6 +52,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
         public IActionResult UpdateProduct(int id, Product product)
         {
             if (id != product.Id)
@@ -57,6 +64,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
         public IActionResult DeleteProduct(int id)
         {
             var product = _productService.GetProductById(id);

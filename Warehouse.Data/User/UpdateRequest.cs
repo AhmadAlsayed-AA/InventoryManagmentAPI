@@ -14,6 +14,10 @@ namespace Warehouse.Data.User
         public string Password { get; set; }
 
         public Roles role { get; set; }
+
+        public bool IsActive { get; set; }
+
+       
     }
 }
 

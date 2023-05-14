@@ -21,7 +21,14 @@ namespace Warehouse.Data.User
         [JsonIgnore]
         public byte[] PasswordSalt { get; set; }
 
-        public int role { get; set; }
+        public string Role { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public User()
+        {
+            IsActive = true; // Set the default value of isActive to true
+        }
     }
 }
 

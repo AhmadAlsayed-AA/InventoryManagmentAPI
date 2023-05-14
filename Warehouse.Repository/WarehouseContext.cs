@@ -2,6 +2,7 @@
 using Warehouse.Data;
 using Microsoft.EntityFrameworkCore;
 using Warehouse.Data.Product;
+using Warehouse.Data.User;
 
 namespace Warehouse.Repository
 {
@@ -9,6 +10,8 @@ namespace Warehouse.Repository
     {
 		public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }
+
 
         public WarehouseContext()
 		{
