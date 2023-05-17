@@ -62,7 +62,7 @@ namespace Warehouse.Services
         {
             var customer = getById(id);
             _userService.update(customer.User.Id, request);
-            customer = _mapper.Map(request, customer);
+            customer.User = _mapper.Map(request, customer.User);
 
             _context.SaveChanges();
 

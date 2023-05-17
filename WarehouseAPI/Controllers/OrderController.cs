@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 using Warehouse.Data.OrderModels;
 using Warehouse.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,6 +25,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE, CUSTOMER")]
+
         public IActionResult PlaceOrder([FromBody] NewOrderRequest request)
         {
    
@@ -34,6 +38,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("{Id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE, CUSTOMER")]
+
         public IActionResult GetOrder(int orderId)
         {
             var order = _orderService.GetOrder(orderId);
@@ -47,20 +53,24 @@ namespace WarehouseAPI.Controllers
             return Ok(order);
         }
 
-        [HttpPut("{orderId}/status")]
-        public IActionResult UpdateOrderStatus(int orderId, UpdateOrderStatusRequest request)
+        [HttpPatch("{Id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+
+        public IActionResult UpdateOrderStatus(int Id, UpdateOrderStatusRequest request)
         {
             // Assuming you have an UpdateOrderStatusRequest class to receive the updated order status from the client
 
             // Validate the request data here (e.g., request validation, authorization, etc.)
 
-            _orderService.UpdateOrderStatus(orderId, request.NewStatus);
+            _orderService.UpdateOrderStatus(Id, request.NewStatus);
 
             // Return a success response
             return Ok();
         }
 
-        [HttpDelete("{orderId}")]
+        [HttpDelete("{Id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult CancelOrder(int orderId)
         {
             _orderService.CancelOrder(orderId);
@@ -69,6 +79,8 @@ namespace WarehouseAPI.Controllers
             return Ok();
         }
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult GetOrders()
         {
             var orders = _orderService.GetOrders();
@@ -77,7 +89,9 @@ namespace WarehouseAPI.Controllers
             return Ok(orders);
         }
 
-        [HttpGet("customer/{customerId}")]
+        [HttpGet("customer/{Id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult GetOrdersByCustomer(int customerId)
         {
             var orders = _orderService.GetOrdersByCustomer(customerId);

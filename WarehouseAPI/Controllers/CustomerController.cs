@@ -36,7 +36,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("GetAll")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, OWNER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+
         public IActionResult GetAll()
         {
             var customers = _customerService.getAll();
@@ -44,7 +45,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("GetById")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "STORE, ADMIN, OWNER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult GetById(int id)
         {
             var customer = _customerService.getById(id);
@@ -54,7 +56,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("Update")]
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "STORE, ADMIN, OWNER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult Update(int id, UpdateRequest model)
         {
             try
@@ -78,6 +81,8 @@ namespace WarehouseAPI.Controllers
 
 
         [HttpDelete("Delete")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, OWNER")]
         public IActionResult Delete(int id)
         {
