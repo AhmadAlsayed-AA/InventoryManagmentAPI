@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace Warehouse.Data.User
+namespace Warehouse.Data.UserModels
 {
 	public class User
 	{

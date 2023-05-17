@@ -1,7 +1,7 @@
 ﻿using System;
 using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
-namespace Warehouse.Data.User
+namespace Warehouse.Data.UserModels
 {
 	public class UpdateRequest
 	{

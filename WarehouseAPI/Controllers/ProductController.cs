@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Warehouse.Data.Product;
+using Warehouse.Data.ProductModels;
 using Warehouse.Services;
 using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
@@ -24,6 +24,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult GetAllProducts()
         {
             var products = _productService.GetAllProducts();
@@ -31,7 +33,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
 
         public IActionResult GetProductById(int id)
         {
@@ -52,7 +54,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
         public IActionResult UpdateProduct(int id, Product product)
         {
             if (id != product.Id)

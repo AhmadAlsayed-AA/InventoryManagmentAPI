@@ -1,8 +1,9 @@
 ﻿using System;
 using AutoMapper;
+using Azure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Warehouse.Data.User;
+using Warehouse.Data.UserModels;
 using Warehouse.Repository;
 using Warehouse.Services.Helpers.SecurityHelper;
 using Warehouse.Services.Helpers.Validation;
@@ -66,8 +67,10 @@ namespace Warehouse.Services
                 _context.Users.Add(user);
 
                 await _context.SaveChangesAsync();
+                var response = _mapper.Map<UserResponse>(user);
+                response.Token = _tokenService.GenerateToken(user);
 
-                return _mapper.Map<UserResponse>(user);
+                return response;
             }
             catch (ValidationException)
             {

@@ -10,6 +10,14 @@ namespace Warehouse.Data.HelperModels.LocalEnums
             EMPLOYEE,
             CUSTOMER,
         }
+        public enum OrderStatus
+        {
+            Pending,
+            Processing,
+            Shipped,
+            Delivered,
+            Cancelled
+        }
     }
 }
 

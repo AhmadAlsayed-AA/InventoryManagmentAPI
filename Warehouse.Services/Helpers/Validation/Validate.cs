@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
-using Warehouse.Data.User;
+using Warehouse.Data.UserModels;
 using Warehouse.Repository;
 using Warehouse.Services.Helpers.SecurityHelper;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Warehouse.Data.Product;
+using Warehouse.Data.ProductModels;
 using Warehouse.Repository;
 
 namespace Warehouse.Services

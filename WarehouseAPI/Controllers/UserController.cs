@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Warehouse.Data.User;
+using Warehouse.Data.UserModels;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -84,7 +84,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = " ADMIN, MANAGER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = " ADMIN")]
         public IActionResult GetById(int id)
         {
             var user = _userService.getById(id);
@@ -95,7 +95,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = " ADMIN, MANAGER")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = " ADMIN")]
         public async Task<ActionResult<UserResponse>> Update(int id, [FromBody] UpdateRequest request)
         {
             try

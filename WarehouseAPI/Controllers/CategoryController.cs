@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Warehouse.Data.Product;
+using Warehouse.Data.ProductModels;
 using Warehouse.Services;
 using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
@@ -24,6 +24,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER, EMPLOYEE")]
+
         public IActionResult GetAllCategories()
         {
             var categories = _categoryService.GetAllCategories();
@@ -31,6 +33,8 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
+
         public IActionResult GetCategoryById(int id)
         {
             var category = _categoryService.GetCategoryById(id);
@@ -42,8 +46,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
-
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
         public IActionResult AddCategory( Category category)
         {
             _categoryService.AddCategory(category);
@@ -51,7 +54,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
 
         public IActionResult UpdateCategory(int id, Category category)
         {
@@ -64,7 +67,7 @@ namespace WarehouseAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "ADMIN, MANAGER")]
 
         public IActionResult DeleteCategory(int id)
         {

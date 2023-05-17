@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Warehouse.Data.User
+namespace Warehouse.Data.UserModels
 {
 	public class AuthRequest
 	{

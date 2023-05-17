@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using static Warehouse.Data.HelperModels.LocalEnums.Enums;
 
-namespace Warehouse.Data.User
+namespace Warehouse.Data.UserModels
 {
 	public class RegisterRequest
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 using AutoMapper;
-using Warehouse.Data.User;
+using Warehouse.Data.UserModels;
 
 namespace Warehouse.Services.Helpers.Mapper
 {
