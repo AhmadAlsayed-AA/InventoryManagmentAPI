@@ -45,11 +45,10 @@ namespace WarehouseAPI.Controllers
 
         [HttpPost("SignIn")]
 
-        public async Task<ActionResult<UserResponse>> signIn([FromBody] AuthRequest request)
+        public async Task<ActionResult<UserResponse>> signIn( AuthRequest request)
         {
             try
             {
-                UserResponse response;
 
 
                 return Ok(await _userService.signIn(request));

@@ -80,7 +80,7 @@ namespace Warehouse.Services
             var order = _context.Orders.Include(i => i.OrderProducts).FirstOrDefault(o => o.Id == orderId);
             if (order != null)
             {
-                if (order.OrderStatus == OrderStatus.Shipped)
+                if (newStatus == OrderStatus.Shipped)
                 {
                     foreach (var orderProduct in order.OrderProducts)
                     {
