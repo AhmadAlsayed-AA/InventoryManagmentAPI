@@ -12,8 +12,8 @@ using Warehouse.Repository;
 namespace Warehouse.Repository.Migrations
 {
     [DbContext(typeof(WarehouseContext))]
-    [Migration("20230517190209_InitialCreate0.1")]
-    partial class InitialCreate01
+    [Migration("20230520190002_InitialCreate0.2")]
+    partial class InitialCreate02
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

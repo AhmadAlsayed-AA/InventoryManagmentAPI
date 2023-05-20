@@ -3527,24 +3527,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hesham\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Hamza\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hesham\\source\\repos\\InventoryManagmentAPI\\Warehouse.Repository\\Warehouse.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Hamza\\source\\repos\\InventoryManagmentAPI\\Warehouse.Repository\\Warehouse.Repository.csproj",
       "projectName": "Warehouse.Repository",
-      "projectPath": "C:\\Users\\Hesham\\source\\repos\\InventoryManagmentAPI\\Warehouse.Repository\\Warehouse.Repository.csproj",
-      "packagesPath": "C:\\Users\\Hesham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hesham\\Source\\Repos\\InventoryManagmentAPI\\Warehouse.Repository\\obj\\",
+      "projectPath": "C:\\Users\\Hamza\\source\\repos\\InventoryManagmentAPI\\Warehouse.Repository\\Warehouse.Repository.csproj",
+      "packagesPath": "C:\\Users\\Hamza\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hamza\\source\\repos\\InventoryManagmentAPI\\Warehouse.Repository\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Hesham\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3552,15 +3547,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Hesham\\source\\repos\\InventoryManagmentAPI\\Warehouse.Data\\Warehouse.Data.csproj": {
-              "projectPath": "C:\\Users\\Hesham\\source\\repos\\InventoryManagmentAPI\\Warehouse.Data\\Warehouse.Data.csproj"
+            "C:\\Users\\Hamza\\source\\repos\\InventoryManagmentAPI\\Warehouse.Data\\Warehouse.Data.csproj": {
+              "projectPath": "C:\\Users\\Hamza\\source\\repos\\InventoryManagmentAPI\\Warehouse.Data\\Warehouse.Data.csproj"
             }
           }
         }
@@ -3612,7 +3606,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

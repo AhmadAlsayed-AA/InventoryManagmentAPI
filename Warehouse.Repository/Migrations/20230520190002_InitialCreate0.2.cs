@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Warehouse.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate01 : Migration
+    public partial class InitialCreate02 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
