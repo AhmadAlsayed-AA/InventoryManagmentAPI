@@ -1,6 +1,7 @@
 ﻿using System;
 using AutoMapper;
 using Warehouse.Data.UserModels;
+using Warehouse.Data.ProductModels;
 
 namespace Warehouse.Services.Helpers.Mapper
 {
@@ -31,7 +32,18 @@ namespace Warehouse.Services.Helpers.Mapper
                     (src, dest, prop) =>
                     prop != null
 
-                )); 
+                ));
+            CreateMap<Product, Product>()
+                .ForAllMembers(x => x.Condition(
+                    (src, dest, prop) =>
+                    {
+                        // ignore null & empty string properties
+                        if (prop == null) return false;
+                        if (prop.GetType() == typeof(string) && string.IsNullOrEmpty((string)prop)) return false;
+
+                        return true;
+                    }
+                ));
         }
         
 	}

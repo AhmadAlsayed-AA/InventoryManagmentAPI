@@ -46,10 +46,10 @@ namespace Warehouse.Services
             var originalProduct = _context.Products.Find(product.Id);
             if (originalProduct == null)
             {
-                throw new ArgumentException("Category not found");
+                throw new ArgumentException("Product not found");
             }
 
-            var properties = typeof(Category).GetProperties();
+            var properties = typeof(Product).GetProperties();
             foreach (var property in properties)
             {
                 var newValue = property.GetValue(product);
