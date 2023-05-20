@@ -11,6 +11,7 @@
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
           "Warehouse.Data": "1.0.0"
         },
         "runtime": {
@@ -114,22 +115,22 @@
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.0.1.0"
           },
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.0.1.0"
           },
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.0.1.0"
           },
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "5.0.1.0"
           }
         }
       },
@@ -193,6 +194,11 @@
             "assemblyVersion": "7.0.5.0",
             "fileVersion": "7.0.523.16503"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.5"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -798,6 +804,13 @@
       "sha512": "sha512-cUJqCiamT0EvpKNgZEV5fqNv2MyVfKNgOPQfFINqHiIKHOYrS0nTCUJP97+UuG0JIIrP792/PwnuNjbekImtBg==",
       "path": "microsoft.entityframeworkcore.sqlserver/7.0.5",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OV/PUGBVSbQVd2daTeXoMBoao2qtfBgT2TuaYo48xRYUS2gH++f8OFiZc6zwASqkMKgs1/t5uVlxgKl18m/1Fw==",
+      "path": "microsoft.entityframeworkcore.tools/7.0.5",
+      "hashPath": "microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",

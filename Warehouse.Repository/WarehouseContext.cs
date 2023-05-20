@@ -27,7 +27,7 @@ namespace Warehouse.Repository
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost; Database=WarehouseDB; User Id=sa; Password=Strong.Pwd-123;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Data Source=Hesham_Omen15\\SQLEXPRESS;Initial Catalog=WarehouseDB;Integrated Security=True;Pooling=False;TrustServerCertificate=True;");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
